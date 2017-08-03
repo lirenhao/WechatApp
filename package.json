@@ -1,0 +1,36 @@
+{
+    "name": "com.yada.mrc.app",
+    "displayName": "WechatApp",
+    "version": "1.0.0",
+    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Apache Cordova Team",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "cordova-android": "^6.2.3",
+        "cordova-plugin-wechat": "^2.0.0",
+        "cordova-plugin-whitelist": "^1.3.2",
+        "whatwg-fetch": "^2.0.3"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-wechat": {
+                "WECHATAPPID": "wxde41f5a91e1a7b02"
+            }
+        },
+        "platforms": [
+            "android"
+        ]
+    },
+    "devDependencies": {
+        "babel-cli": "^6.24.1",
+        "babel-loader": "^7.1.1",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-stage-0": "^6.24.1",
+        "webpack": "^3.3.0"
+    }
+}
