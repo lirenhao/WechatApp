@@ -1,4 +1,6 @@
 import 'whatwg-fetch'
+import 'localforage'
+import 'localforage-cordovasqlitedriver'
 
 document.getElementById('login').onclick = () => {
     const scope = 'snsapi_userinfo'
@@ -27,3 +29,18 @@ document.getElementById('pay').onclick = () => {
             console.log('parsing failed', e)
         })
 }
+
+document.getElementById('data').onclick = () => {
+    localforage.defineDriver(window.cordovaSQLiteDriver)
+        .then(() => {
+            localforage.setDriver([
+                // Try setting cordovaSQLiteDriver if available,
+                window.cordovaSQLiteDriver._driver,
+                // otherwise use one of the default localforage drivers as a fallback.
+                // This should allow you to transparently do your tests in a browser
+                localforage.LOCALSTORAGE
+            ]);
+        })
+}
+
+localforage.setItem()
