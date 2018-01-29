@@ -83,7 +83,7 @@ document.getElementById('login').onclick = function () {
 };
 
 document.getElementById('pay').onclick = function () {
-    fetch('http://10.2.53.166:3000/wechat').then(function (res) {
+    fetch('http://47.93.100.211:3000/wechat').then(function (res) {
         return res.json();
     }).then(function (json) {
         alert(JSON.stringify(json));
